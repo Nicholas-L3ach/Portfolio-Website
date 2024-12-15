@@ -1,0 +1,255 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#homebg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(Assets/Spiral-BG.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+#galleryselection {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid black;
+}
+
+#galleryselection a {
+    font-family: Bahnschrift;
+    padding: 10px 0 10px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#galleryselection a:hover {
+    font-weight: lighter;
+    transition: .2s;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    border-bottom: 3px solid black;
+    z-index: 0;
+    align-items: center;
+}
+
+#spiral {
+    width: 55px;
+    padding: 5px 0 10px 10px;
+    
+}
+
+#hamburger {
+    width: 55px;
+    padding: 5px 25px 10px 0;
+}
+
+#gallery-container {
+    display: flex;
+    width: 100%;
+    padding-top: 75px;
+    background-image: url(Assets/Spiral-BG.gif);
+    background-repeat: round;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+aside { 
+    width: 20%;
+    height: 50vw;
+    overflow-y: scroll;
+}
+
+#art-frame {
+    height: 35vw;
+    margin: 50px 0 25px 0;
+    background-image: url(Galleries/traditional-gallery/3.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: zoom-in;
+}
+
+#arrow-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+#arrow-back {
+    width: 100px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+#arrow-forward {
+    width: 100px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+#gallery-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    padding-top: 25px;
+    justify-content: center;
+    
+}
+
+.thumbnail {
+    height: 20vw;
+    margin: 5px;
+    cursor: pointer;
+    border: 3px solid black;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.thumbnail:hover {
+    border-color: white;
+}
+
+#expanded-bg {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.66);
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#expanded-frame {
+    height: 90%;
+    cursor: zoom-out;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: "Roboto Slab", serif;
+    font-weight: 900;
+    margin: 33px 0 0 0;
+}
+
+h2 {
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+
+#gallery-button {
+    display: none;
+    width: 15vw;
+    height: 15vw;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 25px;
+    background-color: white;
+    background-image: url("Assets/Gallery-Icon.svg");
+    background-size: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#art-title {
+    display: none;
+    position: fixed;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+    font-weight: 900;
+    padding: 5px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-family: "Roboto Slab", serif;
+    font-weight: 900;
+}
+
+#nav-list {
+    padding-right: 25px;
+}
+
+li {
+    padding: 0 5px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+li:hover {
+    color: red;
+}
+
+.active {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1100px) {
+    #gallery-container {
+        display: block;
+        background-size: 255%;
+        background-repeat: repeat-y;
+    }
+
+    #gallery {
+        width: 100%;
+    }
+
+    #art-frame {
+        height: 60vw;
+    }
+
+    aside {
+        width: 100%;
+        height: 100%;
+    }
+
+    .thumbnail {
+        height: 45vw;
+    }
+
+    #expanded-frame {
+        width: 90%;
+        height: auto;
+    }
+}
